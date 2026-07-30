@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Webco - AI Agency Website"
+version = "1.0.0"
+id = "artifacts/webco"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26226
+
+[services.development]
+run = "pnpm --filter @workspace/webco run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/webco", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/webco/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26226"
+BASE_PATH = "/"
