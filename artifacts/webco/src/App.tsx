@@ -9,6 +9,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { ChatbotWidget } from '@/components/ChatbotWidget';
 
 import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
@@ -50,6 +51,7 @@ function Router() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ChatbotWidget />
     </div>
   );
 }
