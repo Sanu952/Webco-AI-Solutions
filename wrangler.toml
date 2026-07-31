@@ -1,0 +1,3 @@
+name = "webco-ai-solutions"
+pages_build_output_dir = "artifacts/webco/dist/public"
+compatibility_date = "2025-01-01"
